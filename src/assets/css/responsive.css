@@ -1,0 +1,59 @@
+@media screen and (max-width: 1199px) {
+    body{
+        font-size: 17px;
+    }
+    h2{
+        font-size: 52px;
+    }
+    h4{
+        font-size: 17px;
+    }
+
+    .navbar-tabs ul a{
+        font-size: 30px;
+    }
+    .card-count{
+        top: -25px;
+        width: 50px;
+        height: 50px;
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .card-howItWork img{
+        max-height: 96px;
+    }
+    .section-padding {
+        padding: 22px 25px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    h2{
+        font-size: 40px;
+    }
+    .header-main{
+        flex-direction: column;
+    }
+    .header-logo{
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .header-top{
+        margin-bottom: 25px;
+    }
+    .navbar-tabs ul a{
+        font-size: 22px;
+        padding: 6px 24px;
+    }
+    .section-padding {
+        padding: 20px 15px;
+    }
+    .section-title {
+        margin-bottom: 30px;
+    }
+    .btn-xl {
+        font-size: 30px;
+        padding: 1.8% 11% 2.6%;
+    }
+}
