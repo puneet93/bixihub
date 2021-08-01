@@ -1,0 +1,44 @@
+*{
+	outline: none !important;
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+:focus{
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+}
+
+ul, ol{
+    padding: 0;
+    margin: 0;
+}
+
+html{
+	font-size: 100.01%;
+	scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Helvetica Neue';
+	font-weight: normal;
+    overflow-x: hidden;
+    line-height: 1.4;
+	font-size: 20px;
+	color: #000;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+a, .btn, button, input{
+	-webkit-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+}
