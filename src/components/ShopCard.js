@@ -13,8 +13,11 @@ const useStyles = makeStyles({
         borderColor: ThemeColor.GrayDark
     },
     cardInner:{
-        padding: '0 !important',
-        textAlign: 'center'
+        padding: '0px',
+        textAlign: 'center',
+        '&:last-child':{
+            paddingBottom: '0px'
+        }
     },
     image:{
         display: 'block',

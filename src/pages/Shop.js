@@ -84,7 +84,7 @@ const useStyles = makeStyles({
 });
 
 
-const Home = () =>{
+const Shop = () =>{
     const classes = useStyles();
 
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -187,4 +187,4 @@ const Home = () =>{
     )
 }
 
-export default Home;
+export default Shop;

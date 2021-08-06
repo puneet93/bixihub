@@ -105,7 +105,10 @@ const useStyles = makeStyles({
     borderColor: ThemeColor.GrayDark,
   },
   cardInner: {
-    padding: "0 !important",
+    padding: "0",
+    '&:last-child':{
+        paddingBottom: '0px'
+    },
     "& img": {
       display: "block",
       maxWidth: "150px",

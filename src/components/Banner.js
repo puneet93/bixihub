@@ -7,7 +7,7 @@ import {
   
 
 // assets
-import Logo from '../assets/images/bixihub-logo.png';
+import Logo from '../assets/images/logo.png';
 import BannerBG from '../assets/images/banner.jpg';
 
 const useStyles = makeStyles({
@@ -74,12 +74,17 @@ const useStyles = makeStyles({
     slogo:{
         width: "100%",
         display: "block",
+        margin: '25px 0',
+
+        '@media (max-width: 639px)':{
+            margin: '20px 0'
+        },
 
         '& img' :{
-            maxHeight: '120px',
+            maxHeight: '50px',
 
-            '@media (max-width: 575px)':{
-                maxHeight: '70px'
+            '@media (max-width: 639px)':{
+                maxHeight: '26px'
             }
         }
     },

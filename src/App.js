@@ -9,6 +9,7 @@ import {
 // pages
 import Home from './pages/Home';
 import Shop from './pages/Shop';
+import InfluencersSearching from './pages/InfluencersSearchingGigs';
 
 export default function App() {
   return (
@@ -16,6 +17,9 @@ export default function App() {
       <Switch>
           <Route path="/shop">
             <Shop />
+          </Route>
+          <Route path="/influencers-searching-gigs">
+            <InfluencersSearching />
           </Route>
           <Route path="/">
             <Home />
