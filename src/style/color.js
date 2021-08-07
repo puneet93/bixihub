@@ -1,5 +1,6 @@
 const ThemeColor = {
     White: '#FFFFFF',
+    cream: '#f8f8f8',
     Black: '#000000',
     Red: '#d0021c',
     RedDark: '#C19191',
