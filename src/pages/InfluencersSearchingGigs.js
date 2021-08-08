@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Grid, makeStyles, Button, TextField, createTheme, Typography, Select } from '@material-ui/core';
+import { Container, makeStyles, Button, TextField, createTheme, Typography } from '@material-ui/core';
 import { ThemeProvider } from "@material-ui/styles";
 import ThemeColor from '../style/color';
 import {
@@ -8,12 +8,12 @@ import {
 
 // layout
 import Layout from '../global/PrimaryLayout';
+import Grid from '../components/GridRowSelect';
 
 // assets
 import Back from '../assets/images/back-arrow.png';
 import Logo from '../assets/images/logo.png';
 import GoogleSignIn from '../assets/images/google-signIn.png';
-import Dummy from '../assets/images/dummy.png';
 
 const useStyles = makeStyles({
     BannerOuter:{
@@ -106,48 +106,8 @@ const useStyles = makeStyles({
             }
         }
     },
-    Thumbnail: {
-        maxWidth: '100%',
-        display: 'block',
-        maxHeight: '130px',
-        "@media (max-width: 959px)":{
-            margin: 'auto'
-        }
-    },
-    fieldOuter:{
-        border: `1px solid ${ThemeColor.GrayDark}`,
-        backgroundColor: ThemeColor.White,
-        padding: '10px 15px 8px',
-        borderRadius: '25px',
-        cursor: 'auto',
-
-        '& textarea':{
-            border: 'none',
-            width: '100%',
-            resize: 'none',
-            fontSize: '18px',
-            textAlign: 'center',
-            fontFamily: 'Helvetica Neue'
-        },
-        '& > div':{
-            width: '100%',
-            '&:before, &:after':{
-                display: 'none'
-            },
-            '& select':{
-                backgroundColor: '#fff',
-                color: ThemeColor.GrayLight,
-                '&:focus':{
-                    backgroundColor: '#fff'
-                }
-            }
-        }
-    },
     Mb20:{
         marginBottom: '20px'
-    },
-    Mb35:{
-        marginBottom: '35px'
     },
     Mb10:{
         marginBottom: '10px',
@@ -230,18 +190,6 @@ const useStyles = makeStyles({
         minHeight: '60px',
         fontSize: '18px',
         lineHeight: '1.2',
-    },
-    gridBorder:{
-        border: `2px solid ${ThemeColor.GrayDark}`,
-        borderRadius: '15px',
-        cursor: 'pointer',
-        '&.active':{
-            backgroundColor: ThemeColor.cream,
-            borderColor: ThemeColor.YellowDark
-        },
-        '&:hover':{
-            backgroundColor: ThemeColor.cream
-        }
     }
 });
 
@@ -259,7 +207,6 @@ const Home = () =>{
     const classes = useStyles();
 
     const [SelectVal, setSelectVal] = React.useState('');
-    const [SelectGrid, setSelectGrid] = React.useState('');
     const [SignIn, setSignIn] = React.useState(false);
     
     const handleChange = (event) => {
@@ -301,226 +248,14 @@ const Home = () =>{
                         {SignIn ? 
                             (
                                 <>
-                                    <Grid container alignItems="center" onClick={() => setSelectGrid('row1')}  className={`${classes.Mb35} ${classes.gridBorder} ${SelectGrid === 'row1' ? 'active' : ''}`} spacing={3}>
-                                        <Grid item md={2} sm={4} xs={6}>
-                                            <img src={Dummy} className={classes.Thumbnail} alt="dummy" />
-                                        </Grid>
-                                        <Grid item md={2} sm={4} xs={6}>
-                                            <div className={classes.fieldOuter}>
-                                                <Typography variant="h6" className={`${classes.typoSubheading} ${classes.center}`}>
-                                                    Channel Name
-                                                </Typography>
-                                                <Typography variant="h5" className={`${classes.typoBold} ${classes.center}`}>
-                                                    TEXT
-                                                </Typography>
-                                            </div>
-                                        </Grid>
-                                        <Grid item md={2} sm={4} xs={6}>
-                                            <div className={classes.fieldOuter}>
-                                                <Typography variant="h6" className={`${classes.typoSubheading} ${classes.center}`}>
-                                                    Total number of channel views
-                                                </Typography>
-                                                <Typography variant="h5" className={`${classes.typoBold} ${classes.center}`}>
-                                                    TEXT
-                                                </Typography>
-                                            </div>
-                                        </Grid>
-                                        <Grid item md={2} sm={4} xs={6}>
-                                            <div className={classes.fieldOuter}>
-                                                <Typography variant="h6" className={`${classes.typoSubheading} ${classes.center}`}>
-                                                    Number of Subscribers
-                                                </Typography>
-                                                <Typography variant="h5" className={`${classes.typoBold} ${classes.center}`}>
-                                                    TEXT
-                                                </Typography>
-                                            </div>
-                                        </Grid>
-                                        <Grid item md={2} sm={4} xs={6}>
-                                            <div className={classes.fieldOuter}>
-                                                <Typography variant="h6" className={`${classes.typoSubheading} ${classes.center}`}>
-                                                    Another Field
-                                                </Typography>
-                                                <Typography variant="h5" className={`${classes.typoBold} ${classes.center}`}>
-                                                    TEXT
-                                                </Typography>
-                                            </div>
-                                        </Grid>
-                                        <Grid item md={2} sm={4} xs={6}>
-                                            <div className={classes.fieldOuter}>
-                                            <Select native defaultValue="" id="grouped-native-select">
-                                                <option value={1}>Channel Category</option>
-                                                <option value={2}>Channel Category</option>
-                                                <option value={2}>Channel Category</option>
-                                                <option value={2}>Channel Category</option>
-                                                </Select>
-                                            </div>
-                                        </Grid>
-                                    </Grid>
-                                    <Grid container alignItems="center" onClick={() => setSelectGrid('row2')}  className={`${classes.Mb35} ${classes.gridBorder} ${SelectGrid === 'row2' ? 'active' : ''}`} spacing={3}>
-                                        <Grid item md={2} sm={4} xs={6}>
-                                            <img src={Dummy} className={classes.Thumbnail} alt="dummy" />
-                                        </Grid>
-                                        <Grid item md={2} sm={4} xs={6}>
-                                            <div className={classes.fieldOuter}>
-                                                <Typography variant="h6" className={`${classes.typoSubheading} ${classes.center}`}>
-                                                    Channel Name
-                                                </Typography>
-                                                <Typography variant="h5" className={`${classes.typoBold} ${classes.center}`}>
-                                                    TEXT
-                                                </Typography>
-                                            </div>
-                                        </Grid>
-                                        <Grid item md={2} sm={4} xs={6}>
-                                            <div className={classes.fieldOuter}>
-                                                <Typography variant="h6" className={`${classes.typoSubheading} ${classes.center}`}>
-                                                    Total number of channel views
-                                                </Typography>
-                                                <Typography variant="h5" className={`${classes.typoBold} ${classes.center}`}>
-                                                    TEXT
-                                                </Typography>
-                                            </div>
-                                        </Grid>
-                                        <Grid item md={2} sm={4} xs={6}>
-                                            <div className={classes.fieldOuter}>
-                                                <Typography variant="h6" className={`${classes.typoSubheading} ${classes.center}`}>
-                                                    Number of Subscribers
-                                                </Typography>
-                                                <Typography variant="h5" className={`${classes.typoBold} ${classes.center}`}>
-                                                    TEXT
-                                                </Typography>
-                                            </div>
-                                        </Grid>
-                                        <Grid item md={2} sm={4} xs={6}>
-                                            <div className={classes.fieldOuter}>
-                                                <Typography variant="h6" className={`${classes.typoSubheading} ${classes.center}`}>
-                                                    Another Field
-                                                </Typography>
-                                                <Typography variant="h5" className={`${classes.typoBold} ${classes.center}`}>
-                                                    TEXT
-                                                </Typography>
-                                            </div>
-                                        </Grid>
-                                        <Grid item md={2} sm={4} xs={6}>
-                                            <div className={classes.fieldOuter}>
-                                            <Select native defaultValue="" id="grouped-native-select">
-                                                <option value={1}>Channel Category</option>
-                                                <option value={2}>Channel Category</option>
-                                                <option value={2}>Channel Category</option>
-                                                <option value={2}>Channel Category</option>
-                                                </Select>
-                                            </div>
-                                        </Grid>
-                                    </Grid>
-                                    <Grid container alignItems="center" onClick={() => setSelectGrid('row3')}  className={`${classes.Mb35} ${classes.gridBorder} ${SelectGrid === 'row3' ? 'active' : ''}`} spacing={3}>
-                                        <Grid item md={2} sm={4} xs={6}>
-                                            <img src={Dummy} className={classes.Thumbnail} alt="dummy" />
-                                        </Grid>
-                                        <Grid item md={2} sm={4} xs={6}>
-                                            <div className={classes.fieldOuter}>
-                                                <Typography variant="h6" className={`${classes.typoSubheading} ${classes.center}`}>
-                                                    Channel Name
-                                                </Typography>
-                                                <Typography variant="h5" className={`${classes.typoBold} ${classes.center}`}>
-                                                    TEXT
-                                                </Typography>
-                                            </div>
-                                        </Grid>
-                                        <Grid item md={2} sm={4} xs={6}>
-                                            <div className={classes.fieldOuter}>
-                                                <Typography variant="h6" className={`${classes.typoSubheading} ${classes.center}`}>
-                                                    Total number of channel views
-                                                </Typography>
-                                                <Typography variant="h5" className={`${classes.typoBold} ${classes.center}`}>
-                                                    TEXT
-                                                </Typography>
-                                            </div>
-                                        </Grid>
-                                        <Grid item md={2} sm={4} xs={6}>
-                                            <div className={classes.fieldOuter}>
-                                                <Typography variant="h6" className={`${classes.typoSubheading} ${classes.center}`}>
-                                                    Number of Subscribers
-                                                </Typography>
-                                                <Typography variant="h5" className={`${classes.typoBold} ${classes.center}`}>
-                                                    TEXT
-                                                </Typography>
-                                            </div>
-                                        </Grid>
-                                        <Grid item md={2} sm={4} xs={6}>
-                                            <div className={classes.fieldOuter}>
-                                                <Typography variant="h6" className={`${classes.typoSubheading} ${classes.center}`}>
-                                                    Another Field
-                                                </Typography>
-                                                <Typography variant="h5" className={`${classes.typoBold} ${classes.center}`}>
-                                                    TEXT
-                                                </Typography>
-                                            </div>
-                                        </Grid>
-                                        <Grid item md={2} sm={4} xs={6}>
-                                            <div className={classes.fieldOuter}>
-                                            <Select native defaultValue="" id="grouped-native-select">
-                                                <option value={1}>Channel Category</option>
-                                                <option value={2}>Channel Category</option>
-                                                <option value={2}>Channel Category</option>
-                                                <option value={2}>Channel Category</option>
-                                                </Select>
-                                            </div>
-                                        </Grid>
-                                    </Grid>
-                                    <Grid container alignItems="center" onClick={() => setSelectGrid('row4')}  className={`${classes.Mb35} ${classes.gridBorder} ${SelectGrid === 'row4' ? 'active' : ''}`} spacing={3}>
-                                        <Grid item md={2} sm={4} xs={6}>
-                                            <img src={Dummy} className={classes.Thumbnail} alt="dummy" />
-                                        </Grid>
-                                        <Grid item md={2} sm={4} xs={6}>
-                                            <div className={classes.fieldOuter}>
-                                                <Typography variant="h6" className={`${classes.typoSubheading} ${classes.center}`}>
-                                                    Channel Name
-                                                </Typography>
-                                                <Typography variant="h5" className={`${classes.typoBold} ${classes.center}`}>
-                                                    TEXT
-                                                </Typography>
-                                            </div>
-                                        </Grid>
-                                        <Grid item md={2} sm={4} xs={6}>
-                                            <div className={classes.fieldOuter}>
-                                                <Typography variant="h6" className={`${classes.typoSubheading} ${classes.center}`}>
-                                                    Total number of channel views
-                                                </Typography>
-                                                <Typography variant="h5" className={`${classes.typoBold} ${classes.center}`}>
-                                                    TEXT
-                                                </Typography>
-                                            </div>
-                                        </Grid>
-                                        <Grid item md={2} sm={4} xs={6}>
-                                            <div className={classes.fieldOuter}>
-                                                <Typography variant="h6" className={`${classes.typoSubheading} ${classes.center}`}>
-                                                    Number of Subscribers
-                                                </Typography>
-                                                <Typography variant="h5" className={`${classes.typoBold} ${classes.center}`}>
-                                                    TEXT
-                                                </Typography>
-                                            </div>
-                                        </Grid>
-                                        <Grid item md={2} sm={4} xs={6}>
-                                            <div className={classes.fieldOuter}>
-                                                <Typography variant="h6" className={`${classes.typoSubheading} ${classes.center}`}>
-                                                    Another Field
-                                                </Typography>
-                                                <Typography variant="h5" className={`${classes.typoBold} ${classes.center}`}>
-                                                    TEXT
-                                                </Typography>
-                                            </div>
-                                        </Grid>
-                                        <Grid item md={2} sm={4} xs={6}>
-                                            <div className={classes.fieldOuter}>
-                                            <Select native defaultValue="" id="grouped-native-select">
-                                                <option value={1}>Channel Category</option>
-                                                <option value={2}>Channel Category</option>
-                                                <option value={2}>Channel Category</option>
-                                                <option value={2}>Channel Category</option>
-                                                </Select>
-                                            </div>
-                                        </Grid>
-                                    </Grid>
+                                    
+                                    
+                                    <Grid />
+                                    <Grid />
+                                    <Grid />
+                                    <Grid />
+                                    <Grid />
+                                    
 
 
                                     <div className={classes.pageBottom}>
