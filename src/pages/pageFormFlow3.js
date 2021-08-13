@@ -22,6 +22,8 @@ import {
 
 // layout
 import Layout from '../global/PrimaryLayout';
+import AccountMenu from '../components/AccountMenu';
+import Calendar from '../components/DatePicker';
 
 // assets
 import Logo from '../assets/images/logo.png';
@@ -30,12 +32,19 @@ const useStyles = makeStyles({
     BannerOuter:{
         textAlign: "center",
         padding: '40px 0 30px',
+
+        '@media (max-width: 959px)':{
+            padding: '20px 0',
+        }
     },
     Relative: {
         position: 'relative'
     },
     header: {
         marginBottom: '60px',
+        '@media (max-width: 575px)':{
+            marginBottom: '40px'
+        },
         '& img' :{
             maxWidth: '360px',
             marginBottom: '20px',
@@ -82,7 +91,8 @@ const useStyles = makeStyles({
         lineHeight: '1.3',
 
         '@media (max-width: 959px)':{
-            fontSize: '1.4rem'
+            fontSize: '1.2rem',
+            marginBottom: '8px'
         }
     },
     pageContent:{
@@ -151,9 +161,6 @@ const useStyles = makeStyles({
                 color: ThemeColor.GrayDark,
                 fontFamily: 'Helvetica Neue'
             }
-        },
-        "@media (max-width: 959px)":{
-            margin: '35px auto 10px'
         }
     },
     typoLabelSubheading:{
@@ -173,10 +180,16 @@ const useStyles = makeStyles({
         marginBottom: '20px'
     },
     mb30:{
-        marginBottom: '30px'
+        marginBottom: '30px',
+        "@media (max-width: 959px)":{
+            marginBottom: '20px'
+        }
     },
     mb50:{
-        marginBottom: '50px'
+        marginBottom: '50px',
+        "@media (max-width: 959px)":{
+            marginBottom: '25px'
+        }
     },
     formButton:{
         width: '100%',
@@ -198,7 +211,7 @@ const useStyles = makeStyles({
     checkBox:{
         alignItems: 'flex-start',
         '& .MuiIconButton-root':{
-            paddingTop: '0px'
+            paddingTop: '3px'
         }
     },
     underline:{
@@ -216,9 +229,8 @@ const theme = createTheme({
 });
 
 
-const Home = () =>{
+const PageFormFlow3 = () =>{
     const classes = useStyles();
-
     const [SelectVal, setSelectVal] = React.useState('');
     const [amount, setAmount] = React.useState({
         amount: '',
@@ -248,6 +260,7 @@ const Home = () =>{
             <Layout>
                 <div className={classes.BannerOuter}>
                     <Container className={classes.Relative}>
+                        <AccountMenu />
                         <div className={classes.header}>
                             <Link to="/"><img src={Logo} alt="logo" /></Link>
                             <Typography variant="h3" className={classes.typoH3}>
@@ -394,10 +407,13 @@ const Home = () =>{
                         </Grid>
 
                         <Grid container spacing={4} className={classes.mb50}>
-                            <Grid item xs={12} className={classes.formField}>
+                            <Grid item xs={12}>
                                 <Typography variant="h5" className={classes.typoLabel}>
                                     Text Here <br /><span className={classes.typoLabelSubheading}>Text Here. Text Here. Text Here. Text Here. Text Here. Text Here. Text Here. Text Here. Text Here. Text Here.</span>
                                 </Typography>
+                            </Grid>
+                            <Grid item xs={12} sm={6} md={4} className={classes.formField}>
+                                <Calendar />
                             </Grid>
                         </Grid>
 
@@ -436,4 +452,4 @@ const Home = () =>{
     )
 }
 
-export default Home;
+export default PageFormFlow3;
