@@ -251,6 +251,7 @@ const PageFormFlow3 = () =>{
         setAmount({ ...amount, [prop]: event.target.value });
     };
 
+    // state update
     const handleChangeState = (event) => {
         setChecked({ ...checked, [event.target.name]: event.target.checked });
     };
