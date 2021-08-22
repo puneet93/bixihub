@@ -106,6 +106,8 @@ const useStyles = makeStyles({
     },
     formField:{
         width: '100%',
+        marginBottom: '15px',
+
         '& .MuiOutlinedInput-root':{
             '& select':{
                 backgroundColor: ThemeColor.White
@@ -154,14 +156,12 @@ const useStyles = makeStyles({
                 fontSize: '18px'
             },
         },
-        '& .MuiFormControl-root':{
-            '& .MuiFormHelperText-root':{
-                fontSize: '14px',
-                fontWeight: 'bold',
-                textAlign: 'right',
-                color: ThemeColor.GrayDark,
-                fontFamily: 'Helvetica Neue'
-            }
+        '& .MuiFormHelperText-root':{
+            fontSize: '14px',
+            fontWeight: 'bold',
+            textAlign: 'right',
+            color: ThemeColor.GrayDark,
+            fontFamily: 'Helvetica Neue'
         }
     },
     typoLabelSubheading:{
@@ -301,13 +301,13 @@ const PageFormFlow3 = () =>{
                                     />
                                 </FormControl>
                             </Grid>
-                            <Grid item xs={12} sm={6} md={4} className={classes.formField}>
+                            <Grid item xs={12} sm={6} md={4}>
                                 <Typography variant="h5" className={classes.typoLabel}>
                                     Text Here
                                 </Typography>
-                                <TextField type="text" variant="outlined" />
+                                <TextField type="text" className={classes.formField} variant="outlined" />
                             </Grid>
-                            <Grid item xs={12} className={classes.formField}>
+                            <Grid item xs={12}>
                                 <Typography variant="h5" className={classes.typoLabel}>
                                     Text Here
                                 </Typography>
@@ -317,12 +317,13 @@ const PageFormFlow3 = () =>{
                                     rows={12}
                                     variant="outlined"
                                     helperText="Text Here Text Here Text"
+                                    className={classes.formField}
                                 />
                             </Grid>
                         </Grid>
 
                         <Grid container spacing={4} className={classes.mb50}>
-                            <Grid item xs={12} sm={6} md={4} className={classes.formField}>
+                            <Grid item xs={12} sm={6} md={4}>
                                 <Typography variant="h5" className={`${classes.typoLabel} ${classes.mb30}`}>
                                     Text Here <br /><span className={classes.typoLabelSubheading}>Text Here Text Here Text Here</span>
                                 </Typography>
@@ -334,6 +335,7 @@ const PageFormFlow3 = () =>{
                                     SelectProps={{
                                         native: true,
                                     }}
+                                    className={classes.formField}
                                     >
                                         <option value="Text Here 1">Text Here 1</option>
                                         <option value="Text Here 2">Text Here 2</option>
@@ -344,17 +346,17 @@ const PageFormFlow3 = () =>{
                         </Grid>
 
                         <Grid container spacing={4} className={classes.mb50}>
-                            <Grid item xs={12} sm={6} md={4} className={classes.formField}>
+                            <Grid item xs={12} sm={6} md={4}>
                                 <Typography variant="h5" className={`${classes.typoLabel} ${classes.mb30}`}>
                                     Text Here <br /><span className={classes.typoLabelSubheading}>Text Here Text Here Text Here</span>
                                 </Typography>
-                                <TextField placeholder="Text Here" type="text" variant="outlined" />
+                                <TextField placeholder="Text Here" className={classes.formField} type="text" variant="outlined" />
                                 <Button variant="contained" className={classes.formButton} color="primary">Text Here</Button>
                             </Grid>
                         </Grid>
 
                         <Grid container spacing={4} className={classes.mb50}>
-                            <Grid item xs={12} sm={6} md={4} className={classes.formField}>
+                            <Grid item xs={12} sm={6} md={4}>
                                 <FormGroup row>
                                     <FormControlLabel
                                         className={classes.checkBox}
@@ -370,7 +372,7 @@ const PageFormFlow3 = () =>{
                         </Grid>
 
                         <Grid container spacing={4} className={classes.mb50}>
-                            <Grid item xs={12} sm={6} md={4} className={classes.formField}>
+                            <Grid item xs={12} sm={6} md={4}>
                                 <Typography variant="h5" className={`${classes.typoLabel} ${classes.mb30}`}>
                                     Text Here <span className={classes.typoLabelSubheadingBold}>(text here)</span>
                                 </Typography>
@@ -379,7 +381,7 @@ const PageFormFlow3 = () =>{
                         </Grid>
 
                         <Grid container spacing={4} className={classes.mb50}>
-                            <Grid item xs={12} sm={6} md={4} className={classes.formField}>
+                            <Grid item xs={12} sm={6} md={4}>
                                 <Typography variant="h5" className={`${classes.typoLabel} ${classes.mb30}`}>
                                     Text Here
                                 </Typography>
@@ -420,12 +422,12 @@ const PageFormFlow3 = () =>{
                         </Grid>
 
                         <Grid container spacing={4} className={classes.mb50}>
-                            <Grid item xs={12} className={classes.formField}>
+                            <Grid item xs={12}>
                                 <Typography variant="h5" className={`${classes.typoLabel} ${classes.mb30}`}>
                                     <Link className={classes.underline} to="/">Text Here</Link> <br /><span className={classes.typoLabelSubheadingBold}><Link className={classes.underline} to="/">Text Here</Link>. Text Here. Text Here.</span>
                                 </Typography>
                             </Grid>
-                            <Grid item xs={12} sm={6} md={4} className={classes.formField}>
+                            <Grid item xs={12} sm={6} md={4}>
                                 <FormGroup row style={{marginBottom: '10px'}}>
                                     <FormControlLabel
                                         control={<Checkbox color="primary" checked={checked.checkedh} onChange={handleChangeState} name="checkedh" />}
@@ -440,7 +442,7 @@ const PageFormFlow3 = () =>{
                         </Grid>
 
                         <Grid container spacing={4} className={classes.center}>
-                            <Grid item xs={12} className={classes.formField}>
+                            <Grid item xs={12}>
                                 <Button variant="contained" className={`${classes.formButton} ${classes.mb20}`} color="primary">Text Here</Button>
                                 <Typography variant="h6" className={`${classes.typoLabel} ${classes.mb30}`}>
                                     Text Here. Text Here. Text Here.
