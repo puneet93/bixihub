@@ -127,7 +127,12 @@ const useStyles = makeStyles({
     pageBottom:{
         margin: '80px auto 20px',
         maxWidth: '620px',
+        width: '100%'
+    },
+    formField:{
         width: '100%',
+        marginBottom: '15px',
+
         '& .MuiOutlinedInput-root':{
             '& select':{
                 backgroundColor: ThemeColor.White
@@ -135,7 +140,6 @@ const useStyles = makeStyles({
         },
         '& .MuiTextField-root':{
             width: '100%',
-            marginBottom: '15px',
 
             '&.Mui-focused':{
                 borderColor: ThemeColor.YellowDark
@@ -143,26 +147,47 @@ const useStyles = makeStyles({
 
             '& fieldset':{
                 borderRadius: '35px',
-                padding: '0 25px'
+                padding: '0 15px'
             },
             '& input':{
                 marginLeft: '5px',
-                paddingLeft:'25px',
-                paddingRight:'25px',
-                fontSize: '22px'
+                paddingLeft:'15px',
+                paddingRight:'15px',
+                fontSize: '18px'
+            },
+            '& textarea':{
+                paddingLeft:'8px',
+                paddingRight:'8px',                
             }
         },
         '& .MuiSelect-select':{
-            fontSize: '20px',
+            fontSize: '18px',
             lineHeight: '1.1',
-            paddingLeft:'25px',
-            paddingRight:'25px'
+            paddingLeft:'15px',
+            paddingRight:'15px'
         },
         '& .MuiSelect-iconOutlined':{
             right: '15px'
         },
-        "@media (max-width: 959px)":{
-            margin: '35px auto 10px'
+        '& .MuiInputBase-formControl':{
+            borderRadius: '35px',
+            '& p':{
+                fontSize: '22px',
+                color: ThemeColor.Black,
+                fontFamily: 'Helvetica Neue'
+            },
+            '& input':{
+                fontSize: '18px'
+            },
+        },
+        '& .MuiFormControl-root':{
+            '& .MuiFormHelperText-root':{
+                fontSize: '14px',
+                fontWeight: 'bold',
+                textAlign: 'right',
+                color: ThemeColor.GrayDark,
+                fontFamily: 'Helvetica Neue'
+            }
         }
     },
     buttonXL: {
@@ -269,17 +294,17 @@ const Home = () =>{
                                         </div>
                                         
                                         <div className={classes.Mb50}>
-                                            <TextField placeholder="Text Here" type="text" variant="outlined" />
-                                            <TextField placeholder="Text Here" type="text" variant="outlined" />
-                                            <TextField placeholder="Text Here" type="text" variant="outlined" />
-                                            <TextField placeholder="Text Here" type="text" variant="outlined" />
+                                            <TextField placeholder="Text Here" className={classes.formField} type="text" variant="outlined" />
+                                            <TextField placeholder="Text Here" className={classes.formField} type="text" variant="outlined" />
+                                            <TextField placeholder="Text Here" className={classes.formField} type="text" variant="outlined" />
+                                            <TextField placeholder="Text Here" className={classes.formField} type="text" variant="outlined" />
                                         </div>
 
                                         <div className={classes.Mb50}>
-                                            <TextField placeholder="Text Here" type="text" variant="outlined" />
-                                            <TextField placeholder="Text Here" type="text" variant="outlined" />
-                                            <TextField placeholder="Text Here" type="text" variant="outlined" />
-                                            <TextField placeholder="Text Here" type="text" variant="outlined" />
+                                            <TextField placeholder="Text Here" className={classes.formField} type="text" variant="outlined" />
+                                            <TextField placeholder="Text Here" className={classes.formField} type="text" variant="outlined" />
+                                            <TextField placeholder="Text Here" className={classes.formField} type="text" variant="outlined" />
+                                            <TextField placeholder="Text Here" className={classes.formField} type="text" variant="outlined" />
                                             <TextField
                                                 select
                                                 value={SelectVal}
@@ -288,6 +313,7 @@ const Home = () =>{
                                                 SelectProps={{
                                                     native: true,
                                                 }}
+                                                className={classes.formField}
                                                 >
                                                     <option value="Text Here 1">Text Here 1</option>
                                                     <option value="Text Here 2">Text Here 2</option>
@@ -302,12 +328,12 @@ const Home = () =>{
                                         </div>
                                         
                                         <div className={classes.Mb50}>
-                                            <TextField placeholder="Text Here" type="text" variant="outlined" />
-                                            <TextField placeholder="Text Here" type="text" variant="outlined" />
-                                            <TextField placeholder="Text Here" type="text" variant="outlined" />
-                                            <TextField placeholder="Text Here" type="text" variant="outlined" />
-                                            <TextField placeholder="Text Here" type="text" variant="outlined" />
-                                            <TextField placeholder="Text Here" type="text" variant="outlined" />
+                                            <TextField placeholder="Text Here" className={classes.formField} type="text" variant="outlined" />
+                                            <TextField placeholder="Text Here" className={classes.formField} type="text" variant="outlined" />
+                                            <TextField placeholder="Text Here" className={classes.formField} type="text" variant="outlined" />
+                                            <TextField placeholder="Text Here" className={classes.formField} type="text" variant="outlined" />
+                                            <TextField placeholder="Text Here" className={classes.formField} type="text" variant="outlined" />
+                                            <TextField placeholder="Text Here" className={classes.formField} type="text" variant="outlined" />
                                         </div>
 
                                         <div className={classes.center}>

@@ -105,6 +105,7 @@ const useStyles = makeStyles({
         textAlign: 'center'
     },
     formField:{
+        width: '100%',
         '& .MuiOutlinedInput-root':{
             '& select':{
                 backgroundColor: ThemeColor.White
@@ -281,17 +282,17 @@ const PageFormFlow3 = () =>{
                 <div className={classes.pageContent}>
                     <Container>
                         <Grid container spacing={4} className={classes.mb30}>
-                            <Grid item xs={12} sm={6} md={4} className={classes.formField}>
+                            <Grid item xs={12} sm={6} md={4}>
                                 <Typography variant="h5" className={classes.typoLabel}>
                                     Text Here
                                 </Typography>
-                                <TextField type="text" variant="outlined" />
+                                <TextField type="text" className={classes.formField} variant="outlined" />
                             </Grid>
-                            <Grid item xs={12} sm={6} md={4} className={classes.formField}>
+                            <Grid item xs={12} sm={6} md={4}>
                                 <Typography variant="h5" className={classes.typoLabel}>
                                     Text Here
                                 </Typography>
-                                <FormControl fullWidth variant="outlined">
+                                <FormControl className={classes.formField} fullWidth variant="outlined">
                                     <OutlinedInput
                                         id="standard-adornment-amount"
                                         value={amount.amount}
