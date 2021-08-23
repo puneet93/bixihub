@@ -113,7 +113,7 @@ const useStyles = makeStyles({
                 backgroundColor: ThemeColor.White
             }
         },
-        '& .MuiTextField-root':{
+        '& .MuiTextField-root, & .MuiInputBase-root':{
             width: '100%',
             marginBottom: '15px',
 
