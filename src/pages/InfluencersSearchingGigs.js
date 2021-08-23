@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Container, makeStyles, Button, TextField, createTheme, Typography } from '@material-ui/core';
 import { ThemeProvider } from "@material-ui/styles";
 import ThemeColor from '../style/color';
@@ -153,16 +154,19 @@ const useStyles = makeStyles({
                 marginLeft: '5px',
                 paddingLeft:'15px',
                 paddingRight:'15px',
+                borderRadius: '35px',
                 fontSize: '18px'
             },
             '& textarea':{
                 paddingLeft:'8px',
-                paddingRight:'8px',                
+                paddingRight:'8px',    
+                borderRadius: '35px',            
             }
         },
         '& .MuiSelect-select':{
             fontSize: '18px',
             lineHeight: '1.1',
+            borderRadius: '35px',
             paddingLeft:'15px',
             paddingRight:'15px'
         },
@@ -217,6 +221,14 @@ const useStyles = makeStyles({
         lineHeight: '1.2',
     }
 });
+
+const StyledTextField = styled(TextField)`
+  .MuiOutlinedInput-root {
+    fieldset, input, select, textarea {
+        border-radius: 30px
+    }
+  }
+`;
 
 
 const theme = createTheme({
@@ -294,7 +306,7 @@ const Home = () =>{
                                         </div>
                                         
                                         <div className={classes.Mb50}>
-                                            <TextField placeholder="Text Here" className={classes.formField} type="text" variant="outlined" />
+                                            <StyledTextField placeholder="Text Here" className={classes.formField} type="text" variant="outlined" />
                                             <TextField placeholder="Text Here" className={classes.formField} type="text" variant="outlined" />
                                             <TextField placeholder="Text Here" className={classes.formField} type="text" variant="outlined" />
                                             <TextField placeholder="Text Here" className={classes.formField} type="text" variant="outlined" />
