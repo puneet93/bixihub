@@ -107,61 +107,45 @@ const useStyles = makeStyles({
     formField:{
         width: '100%',
         marginBottom: '15px',
-
-        '& .MuiOutlinedInput-root':{
-            '& select':{
-                backgroundColor: ThemeColor.White
-            }
-        },
-        '& .MuiTextField-root, & .MuiInputBase-root':{
-            width: '100%',
-            marginBottom: '15px',
-
-            '&.Mui-focused':{
-                borderColor: ThemeColor.YellowDark
-            },
-
-            '& fieldset':{
-                borderRadius: '35px',
-                padding: '0 15px'
-            },
-            '& input':{
-                marginLeft: '5px',
-                paddingLeft:'15px',
-                paddingRight:'15px',
-                fontSize: '18px'
-            },
-            '& textarea':{
-                paddingLeft:'8px',
-                paddingRight:'8px',                
-            }
-        },
-        '& .MuiSelect-select':{
+        '& select':{
+            backgroundColor: ThemeColor.White,
             fontSize: '18px',
             lineHeight: '1.1',
+            borderRadius: '35px',
             paddingLeft:'15px',
             paddingRight:'15px'
         },
-        '& .MuiSelect-iconOutlined':{
-            right: '15px'
-        },
-        '& .MuiInputBase-formControl':{
+        '& fieldset':{
             borderRadius: '35px',
-            '& p':{
-                fontSize: '22px',
-                color: ThemeColor.Black,
-                fontFamily: 'Helvetica Neue'
-            },
-            '& input':{
-                fontSize: '18px'
-            },
+            padding: '0 15px'
         },
-        '& .MuiFormHelperText-root':{
-            fontSize: '14px',
-            fontWeight: 'bold',
+        '& input':{
+            marginLeft: '5px',
+            paddingLeft:'15px',
+            paddingRight:'15px',
+            borderRadius: '35px',
+            fontSize: '18px'
+        },
+        '& textarea':{
+            paddingLeft:'8px',
+            paddingRight:'8px'         
+        },
+        '& p':{
+            fontSize: '22px',
+            fontFamily: 'Helvetica Neue',
+            fontWeight: '300',
             textAlign: 'right',
             color: ThemeColor.GrayDark,
-            fontFamily: 'Helvetica Neue'
+        },
+        '& > p':{
+            fontSize: '14px',
+            fontWeight: 'bold'
+        },
+        '& .Mui-focused':{
+            borderColor: ThemeColor.YellowDark,
+            '& select':{
+                backgroundColor: ThemeColor.White,
+            }
         }
     },
     typoLabelSubheading:{
@@ -217,6 +201,11 @@ const useStyles = makeStyles({
     },
     underline:{
         textDecoration: 'underline'
+    },
+    formFieldPicker:{
+        '& div' :{
+            borderRadius: '30px'
+        }
     }
 });
 
@@ -416,7 +405,7 @@ const PageFormFlow3 = () =>{
                                     Text Here <br /><span className={classes.typoLabelSubheading}>Text Here. Text Here. Text Here. Text Here. Text Here. Text Here. Text Here. Text Here. Text Here. Text Here.</span>
                                 </Typography>
                             </Grid>
-                            <Grid item xs={12} sm={6} md={4} className={classes.formField}>
+                            <Grid item xs={12} sm={6} md={4} className={`${classes.formField} ${classes.formFieldPicker}`}>
                                 <Calendar />
                             </Grid>
                         </Grid>
