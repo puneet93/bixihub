@@ -6,8 +6,10 @@ const ThemeColor = {
     RedDark: '#C19191',
     GrayDark: '#707070',
     GrayLight: '#B1B1B1',
+    GrayLightD6: '#D6D6D6',
     YellowDark: '#E8AF46',
     YellowLight: '#E8B049',
+    Green: '#66BE22',
 }
 
 export default ThemeColor;

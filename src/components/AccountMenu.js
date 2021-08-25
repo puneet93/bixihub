@@ -26,20 +26,19 @@ const useStyles = makeStyles({
     '& ul':{
       listStyleType: 'none',
       display: 'flex',
-      padding: '0px',
-
-      '& a': {
-        marginRight: '30px',
-        position: 'relative',
-        
-        '&:hover':{
-            color: ThemeColor.YellowDark
-        },
-        '@media (max-width: 575px)':{
-            marginRight: '25px',
-            fontSize: '18px'
-        }
+      padding: '0px'
+    },
+    '& a': {
+      marginRight: '30px',
+      position: 'relative',
+      
+      '&:hover':{
+          color: ThemeColor.YellowDark
       },
+      '@media (max-width: 575px)':{
+          marginRight: '25px',
+          fontSize: '18px'
+      }
     }
   },
   indigator:{
