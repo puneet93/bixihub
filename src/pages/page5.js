@@ -375,25 +375,26 @@
                                                 </Grid>
                                                 <Grid item xs={8} sm={7}>
                                                     <Typography variant="h6" className={classes.typoBold}>
-                                                        Text Here
+                                                        Text
                                                     </Typography>
                                                     <Typography variant="h6" className={classes.lineHeight}>
-                                                        Text Here
+                                                        Text: text
                                                     </Typography>
                                                     <Typography variant="h6" className={classes.lineHeight}>
-                                                        Text Here
+                                                        Text: text
                                                     </Typography>
                                                     <Typography variant="h6" className={classes.lineHeight}>
-                                                        Text Here
+                                                        Text: text
                                                     </Typography>
                                                 </Grid>
                                                 <Grid item xs={12} sm={3}>
                                                     <Typography variant="h6" className={`${classes.lineHeight} ${classes.center}`}>
-                                                        Text Here
+                                                        Text
                                                     </Typography>
 
-                                                    <Button variant="contained" className={classes.formButton} color="primary">Text Here</Button>
-                                                    <Button variant="contained" className={classes.formButton} color="primary">Text Here</Button>
+                                                    <Button variant="contained" className={classes.formButton} color="primary">Text</Button>
+                                                    <Button variant="contained" className={classes.formButton} color="primary">Text</Button>
+                                                    <Button variant="contained" className={classes.formButton} color="primary">Text</Button>
                                                 </Grid>
                                             </Grid>
                                         </Box>
@@ -405,25 +406,26 @@
                                                 </Grid>
                                                 <Grid item xs={8} sm={7}>
                                                     <Typography variant="h6" className={classes.typoBold}>
-                                                        Text Here
+                                                        Text
                                                     </Typography>
                                                     <Typography variant="h6" className={classes.lineHeight}>
-                                                        Text Here
+                                                        Text: text
                                                     </Typography>
                                                     <Typography variant="h6" className={classes.lineHeight}>
-                                                        Text Here
+                                                        Text: text
                                                     </Typography>
                                                     <Typography variant="h6" className={classes.lineHeight}>
-                                                        Text Here
+                                                        Text: text
                                                     </Typography>
                                                 </Grid>
                                                 <Grid item xs={12} sm={3}>
                                                     <Typography variant="h6" className={`${classes.lineHeight} ${classes.center}`}>
-                                                        Text Here
+                                                        Text
                                                     </Typography>
 
-                                                    <Button variant="contained" className={classes.formButton} color="primary">Text Here</Button>
-                                                    <Button variant="contained" className={classes.formButton} color="primary">Text Here</Button>
+                                                    <Button variant="contained" className={classes.formButton} color="primary">Text</Button>
+                                                    <Button variant="contained" className={classes.formButton} color="primary">Text</Button>
+                                                    <Button variant="contained" className={classes.formButton} color="primary">Text</Button>
                                                 </Grid>
                                             </Grid>
                                         </Box>
@@ -446,13 +448,13 @@
                                                         Text
                                                     </Typography>
                                                     <Typography variant="h6" className={classes.lineHeight}>
-                                                        Text
+                                                        Text: text
                                                     </Typography>
                                                     <Typography variant="h6" className={classes.lineHeight}>
-                                                        Text
+                                                        Text: text
                                                     </Typography>
                                                     <Typography variant="h6" className={classes.lineHeight}>
-                                                        Text
+                                                        Text: text
                                                     </Typography>
                                                 </Grid>
                                                 <Grid item xs={4}>
@@ -472,13 +474,13 @@
                                                         Text
                                                     </Typography>
                                                     <Typography variant="h6" className={classes.lineHeight}>
-                                                        Text
+                                                        Text: text
                                                     </Typography>
                                                     <Typography variant="h6" className={classes.lineHeight}>
-                                                        Text
+                                                        Text: text
                                                     </Typography>
                                                     <Typography variant="h6" className={classes.lineHeight}>
-                                                        Text
+                                                        Text: text
                                                     </Typography>
                                                 </Grid>
                                                 <Grid item xs={4}>
