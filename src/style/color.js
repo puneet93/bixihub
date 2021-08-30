@@ -10,6 +10,8 @@ const ThemeColor = {
     YellowDark: '#E8AF46',
     YellowLight: '#E8B049',
     Green: '#66BE22',
+    Online: '#00FF00',
+    LinkColor: '#5D8FD3'
 }
 
 export default ThemeColor;
