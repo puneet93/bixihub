@@ -1,4 +1,4 @@
-    import React from 'react';
+    import React, {useState} from 'react';
     import {
     Container,
     makeStyles,
@@ -201,6 +201,10 @@
                 padding: '15px'
             }
         },
+        boxContainerScroll:{
+            height: '440px',
+            overflow: 'auto'
+        },
         boxContainerInner:{
             maxWidth: '750px',
             width: '100%',
@@ -313,6 +317,7 @@
         },
         avatarItem:{
             display: 'flex',
+            cursor: 'pointer',
             alignItems: 'center',
             padding: '15px 12px',
             '& + div' :{
@@ -376,6 +381,36 @@
 
     const PageFormFlow3 = () =>{
         const classes = useStyles();
+
+        const [Avatar1, SetAvatar1] = useState(true);
+        const [Avatar2, SetAvatar2] = useState(false);
+        const [Avatar3, SetAvatar3] = useState(false);
+        const [Avatar4, SetAvatar4] = useState(false);
+
+        const avaterHandle1 = (e) => {
+            SetAvatar1(true)
+            SetAvatar2(false)
+            SetAvatar3(false)
+            SetAvatar4(false)
+        };
+        const avaterHandle2 = (e) => {
+            SetAvatar2(true)
+            SetAvatar1(false)
+            SetAvatar3(false)
+            SetAvatar4(false)
+        };
+        const avaterHandle3 = (e) => {
+            SetAvatar3(true)
+            SetAvatar2(false)
+            SetAvatar1(false)
+            SetAvatar4(false)
+        };
+        const avaterHandle4 = (e) => {
+            SetAvatar4(true)
+            SetAvatar2(false)
+            SetAvatar3(false)
+            SetAvatar1(false)
+        };
         
         return(
             <ThemeProvider theme={theme}>
@@ -407,8 +442,8 @@
                         <Container>
                             <Grid container spacing={2} className={classes.mb50}>
                                 <Grid item xs={12} sm={12} md={3} className={classes.mb20}>
-                                    <Box className={`${classes.boxContainer} ${classes.p0}`}>
-                                        <Box className={classes.avatarItem}>
+                                    <Box className={`${classes.boxContainer} ${classes.boxContainerScroll} ${classes.p0}`}>
+                                        <Box className={classes.avatarItem} onClick={() => avaterHandle1()}>
                                             <Avatar aria-haspopup="true" className={classes.avtar}>P <Box component="span" className={classes.indigator}></Box></Avatar>
                                             <Box className={classes.avatarItemContent}>
                                                 <Typography variant="h5" className={`${classes.typoBold} ${classes.mb8}`}>
@@ -419,7 +454,29 @@
                                                 </Typography>
                                             </Box>
                                         </Box>
-                                        <Box className={classes.avatarItem}>
+                                        <Box className={classes.avatarItem} onClick={() => avaterHandle2()}>
+                                            <Avatar aria-haspopup="true" className={classes.avtar}>P <Box component="span" className={classes.indigator}></Box></Avatar>
+                                            <Box className={classes.avatarItemContent}>
+                                                <Typography variant="h5" className={`${classes.typoBold} ${classes.mb8}`}>
+                                                    Text
+                                                </Typography>
+                                                <Typography variant="h6" className={classes.typoSmall}>
+                                                    Text
+                                                </Typography>
+                                            </Box>
+                                        </Box>
+                                        <Box className={classes.avatarItem} onClick={() => avaterHandle3()}>
+                                            <Avatar aria-haspopup="true" className={classes.avtar}>P <Box component="span" className={classes.indigator}></Box></Avatar>
+                                            <Box className={classes.avatarItemContent}>
+                                                <Typography variant="h5" className={`${classes.typoBold} ${classes.mb8}`}>
+                                                    Text
+                                                </Typography>
+                                                <Typography variant="h6" className={classes.typoSmall}>
+                                                    Text
+                                                </Typography>
+                                            </Box>
+                                        </Box>
+                                        <Box className={classes.avatarItem} onClick={() => avaterHandle4()}>
                                             <Avatar aria-haspopup="true" className={classes.avtar}>P <Box component="span" className={classes.indigator}></Box></Avatar>
                                             <Box className={classes.avatarItemContent}>
                                                 <Typography variant="h5" className={`${classes.typoBold} ${classes.mb8}`}>
@@ -466,10 +523,11 @@
                                     </Box>
                                 </Grid>
                                 <Grid item xs={12} sm={12} md={6} className={classes.mb20}>
+                                    {Avatar1 ? 
                                     <Box className={`${classes.boxContainer} ${classes.p0}`}>
                                         <Box p={1.2}>
                                             <Typography variant="h6" className={`${classes.typoXLSmall} ${classes.center}`}>
-                                                Text
+                                                Text : Avatar1
                                             </Typography>
                                         </Box>
                                         <Box className={classes.textNoWrap} p={1.2}>
@@ -546,7 +604,257 @@
                                                 Text
                                             </Typography>
                                         </Box>
-                                    </Box>
+                                    </Box> : ''
+                                    }
+                                    {Avatar2 ? 
+                                    <Box className={`${classes.boxContainer} ${classes.p0}`}>
+                                        <Box p={1.2}>
+                                            <Typography variant="h6" className={`${classes.typoXLSmall} ${classes.center}`}>
+                                                Text : Avatar2
+                                            </Typography>
+                                        </Box>
+                                        <Box className={classes.textNoWrap} p={1.2}>
+                                            <Typography variant="h6" className={classes.typoSmall}>
+                                                Text
+                                            </Typography>
+                                            <Typography variant="h6" className={`${classes.typoXLSmall} ${classes.center}`}>
+                                                Text
+                                            </Typography>
+                                        </Box>
+                                        <Box className={classes.textNoWrap} p={1.2}>
+                                            <Typography variant="h6" className={classes.typoSmall}>
+                                                Text
+                                            </Typography>
+                                            <Typography variant="h6" className={`${classes.typoXLSmall} ${classes.center}`}>
+                                                Text
+                                            </Typography>
+                                        </Box>
+                                        <Box className={classes.textNoWrap} p={1.2}>
+                                            <Typography variant="h6" className={classes.typoSmall}>
+                                                Text
+                                            </Typography>
+                                            <Typography variant="h6" className={`${classes.typoXLSmall} ${classes.center}`}>
+                                                Text
+                                            </Typography>
+                                        </Box>
+                                        <Box className={classes.textNoWrap} p={1.2}>
+                                            <Typography variant="h6" className={classes.typoSmall}>
+                                                Text
+                                            </Typography>
+                                            <Typography variant="h6" className={`${classes.typoXLSmall} ${classes.center}`}>
+                                                Text
+                                            </Typography>
+                                        </Box>
+
+                                        <Typography variant="h6" className={`${classes.divider} ${classes.center}`}>
+                                            Text
+                                        </Typography>
+
+                                        <Box p={1.2}>
+                                            <Typography variant="h6" className={`${classes.typoXLSmall} ${classes.center}`}>
+                                                Text
+                                            </Typography>
+                                        </Box>
+                                        <Box className={classes.textNoWrap} p={1.2}>
+                                            <Typography variant="h6" className={classes.typoSmall}>
+                                                Text
+                                            </Typography>
+                                            <Typography variant="h6" className={`${classes.typoXLSmall} ${classes.center}`}>
+                                                Text
+                                            </Typography>
+                                        </Box>
+                                        <Box className={classes.textNoWrap} p={1.2}>
+                                            <Typography variant="h6" className={classes.typoSmall}>
+                                                Text
+                                            </Typography>
+                                            <Typography variant="h6" className={`${classes.typoXLSmall} ${classes.center}`}>
+                                                Text
+                                            </Typography>
+                                        </Box>
+                                        <Box className={classes.textNoWrap} p={1.2}>
+                                            <Typography variant="h6" className={classes.typoSmall}>
+                                                Text
+                                            </Typography>
+                                            <Typography variant="h6" className={`${classes.typoXLSmall} ${classes.center}`}>
+                                                Text
+                                            </Typography>
+                                        </Box>
+                                        <Box className={classes.textNoWrap} p={1.2}>
+                                            <Typography variant="h6" className={classes.typoSmall}>
+                                                Text
+                                            </Typography>
+                                            <Typography variant="h6" className={`${classes.typoXLSmall} ${classes.center}`}>
+                                                Text
+                                            </Typography>
+                                        </Box>
+                                    </Box> : ''
+                                    }
+                                    {Avatar3 ? 
+                                    <Box className={`${classes.boxContainer} ${classes.p0}`}>
+                                        <Box p={1.2}>
+                                            <Typography variant="h6" className={`${classes.typoXLSmall} ${classes.center}`}>
+                                                Text : Avatar3
+                                            </Typography>
+                                        </Box>
+                                        <Box className={classes.textNoWrap} p={1.2}>
+                                            <Typography variant="h6" className={classes.typoSmall}>
+                                                Text
+                                            </Typography>
+                                            <Typography variant="h6" className={`${classes.typoXLSmall} ${classes.center}`}>
+                                                Text
+                                            </Typography>
+                                        </Box>
+                                        <Box className={classes.textNoWrap} p={1.2}>
+                                            <Typography variant="h6" className={classes.typoSmall}>
+                                                Text
+                                            </Typography>
+                                            <Typography variant="h6" className={`${classes.typoXLSmall} ${classes.center}`}>
+                                                Text
+                                            </Typography>
+                                        </Box>
+                                        <Box className={classes.textNoWrap} p={1.2}>
+                                            <Typography variant="h6" className={classes.typoSmall}>
+                                                Text
+                                            </Typography>
+                                            <Typography variant="h6" className={`${classes.typoXLSmall} ${classes.center}`}>
+                                                Text
+                                            </Typography>
+                                        </Box>
+                                        <Box className={classes.textNoWrap} p={1.2}>
+                                            <Typography variant="h6" className={classes.typoSmall}>
+                                                Text
+                                            </Typography>
+                                            <Typography variant="h6" className={`${classes.typoXLSmall} ${classes.center}`}>
+                                                Text
+                                            </Typography>
+                                        </Box>
+
+                                        <Typography variant="h6" className={`${classes.divider} ${classes.center}`}>
+                                            Text
+                                        </Typography>
+
+                                        <Box p={1.2}>
+                                            <Typography variant="h6" className={`${classes.typoXLSmall} ${classes.center}`}>
+                                                Text
+                                            </Typography>
+                                        </Box>
+                                        <Box className={classes.textNoWrap} p={1.2}>
+                                            <Typography variant="h6" className={classes.typoSmall}>
+                                                Text
+                                            </Typography>
+                                            <Typography variant="h6" className={`${classes.typoXLSmall} ${classes.center}`}>
+                                                Text
+                                            </Typography>
+                                        </Box>
+                                        <Box className={classes.textNoWrap} p={1.2}>
+                                            <Typography variant="h6" className={classes.typoSmall}>
+                                                Text
+                                            </Typography>
+                                            <Typography variant="h6" className={`${classes.typoXLSmall} ${classes.center}`}>
+                                                Text
+                                            </Typography>
+                                        </Box>
+                                        <Box className={classes.textNoWrap} p={1.2}>
+                                            <Typography variant="h6" className={classes.typoSmall}>
+                                                Text
+                                            </Typography>
+                                            <Typography variant="h6" className={`${classes.typoXLSmall} ${classes.center}`}>
+                                                Text
+                                            </Typography>
+                                        </Box>
+                                        <Box className={classes.textNoWrap} p={1.2}>
+                                            <Typography variant="h6" className={classes.typoSmall}>
+                                                Text
+                                            </Typography>
+                                            <Typography variant="h6" className={`${classes.typoXLSmall} ${classes.center}`}>
+                                                Text
+                                            </Typography>
+                                        </Box>
+                                    </Box> : ''
+                                    }
+                                    {Avatar4 ? 
+                                    <Box className={`${classes.boxContainer} ${classes.p0}`}>
+                                        <Box p={1.2}>
+                                            <Typography variant="h6" className={`${classes.typoXLSmall} ${classes.center}`}>
+                                                Text : Avatar4
+                                            </Typography>
+                                        </Box>
+                                        <Box className={classes.textNoWrap} p={1.2}>
+                                            <Typography variant="h6" className={classes.typoSmall}>
+                                                Text
+                                            </Typography>
+                                            <Typography variant="h6" className={`${classes.typoXLSmall} ${classes.center}`}>
+                                                Text
+                                            </Typography>
+                                        </Box>
+                                        <Box className={classes.textNoWrap} p={1.2}>
+                                            <Typography variant="h6" className={classes.typoSmall}>
+                                                Text
+                                            </Typography>
+                                            <Typography variant="h6" className={`${classes.typoXLSmall} ${classes.center}`}>
+                                                Text
+                                            </Typography>
+                                        </Box>
+                                        <Box className={classes.textNoWrap} p={1.2}>
+                                            <Typography variant="h6" className={classes.typoSmall}>
+                                                Text
+                                            </Typography>
+                                            <Typography variant="h6" className={`${classes.typoXLSmall} ${classes.center}`}>
+                                                Text
+                                            </Typography>
+                                        </Box>
+                                        <Box className={classes.textNoWrap} p={1.2}>
+                                            <Typography variant="h6" className={classes.typoSmall}>
+                                                Text
+                                            </Typography>
+                                            <Typography variant="h6" className={`${classes.typoXLSmall} ${classes.center}`}>
+                                                Text
+                                            </Typography>
+                                        </Box>
+
+                                        <Typography variant="h6" className={`${classes.divider} ${classes.center}`}>
+                                            Text
+                                        </Typography>
+
+                                        <Box p={1.2}>
+                                            <Typography variant="h6" className={`${classes.typoXLSmall} ${classes.center}`}>
+                                                Text
+                                            </Typography>
+                                        </Box>
+                                        <Box className={classes.textNoWrap} p={1.2}>
+                                            <Typography variant="h6" className={classes.typoSmall}>
+                                                Text
+                                            </Typography>
+                                            <Typography variant="h6" className={`${classes.typoXLSmall} ${classes.center}`}>
+                                                Text
+                                            </Typography>
+                                        </Box>
+                                        <Box className={classes.textNoWrap} p={1.2}>
+                                            <Typography variant="h6" className={classes.typoSmall}>
+                                                Text
+                                            </Typography>
+                                            <Typography variant="h6" className={`${classes.typoXLSmall} ${classes.center}`}>
+                                                Text
+                                            </Typography>
+                                        </Box>
+                                        <Box className={classes.textNoWrap} p={1.2}>
+                                            <Typography variant="h6" className={classes.typoSmall}>
+                                                Text
+                                            </Typography>
+                                            <Typography variant="h6" className={`${classes.typoXLSmall} ${classes.center}`}>
+                                                Text
+                                            </Typography>
+                                        </Box>
+                                        <Box className={classes.textNoWrap} p={1.2}>
+                                            <Typography variant="h6" className={classes.typoSmall}>
+                                                Text
+                                            </Typography>
+                                            <Typography variant="h6" className={`${classes.typoXLSmall} ${classes.center}`}>
+                                                Text
+                                            </Typography>
+                                        </Box>
+                                    </Box> : ''
+                                    }
                                 </Grid>
                                 <Grid item xs={12} sm={12} md={3} className={classes.mb20}>
                                     <Box className={`${classes.boxContainer} ${classes.p20}`} display={'flex'} flexDirection="column">
