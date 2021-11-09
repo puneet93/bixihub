@@ -13,6 +13,7 @@ import InfluencersSearching from './pages/InfluencersSearchingGigs';
 import PageFormFlow3 from './pages/pageFormFlow3';
 import Page5 from './pages/page5';
 import Page6 from './pages/page6';
+import Dashboard from './pages/Dashboard';
 
 export default function App() {
   return (
@@ -32,6 +33,9 @@ export default function App() {
           </Route>
           <Route path="/page6">
             <Page6 />
+          </Route>
+          <Route path="/dashboard">
+            <Dashboard />
           </Route>
           <Route path="/">
             <Home />
