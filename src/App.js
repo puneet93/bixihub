@@ -13,7 +13,7 @@ import InfluencersSearching from './pages/InfluencersSearchingGigs';
 import PageFormFlow3 from './pages/pageFormFlow3';
 import Page5 from './pages/page5';
 import Page6 from './pages/page6';
-import Dashboard from './pages/Dashboard';
+import Dashboard from './pages/Dashboard/Index';
 
 export default function App() {
   return (
