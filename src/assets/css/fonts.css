@@ -23,3 +23,16 @@
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'Kefa';
+    src: url('../fonts/Kefa-Regular.eot');
+    src: url('../fonts/Kefa-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Kefa-Regular.woff2') format('woff2'),
+        url('../fonts/Kefa-Regular.woff') format('woff'),
+        url('../fonts/Kefa-Regular.ttf') format('truetype'),
+        url('../fonts/Kefa-Regular.svg#Kefa-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
