@@ -1,12 +1,6 @@
-
-// component
-import Header from '../components/Header';
-
 const PLayout = (props) =>{
     return(
-        <div id="wrapper">
-            <Header />
-            
+        <div id="wrapper">            
             {props.children}
         </div>
     )
